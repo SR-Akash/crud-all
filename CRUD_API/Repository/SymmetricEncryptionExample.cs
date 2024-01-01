@@ -95,6 +95,7 @@ namespace CRUD_API.Repository
                 // Generate a key (should be kept secret and shared securely between communicating parties)
                 byte[] secretKey = GenerateKey();
 
+
                 // Message to be encrypted
                 string originalMessage = inputMessage;
                 byte[] utf8Bytes = Encoding.UTF8.GetBytes(key);

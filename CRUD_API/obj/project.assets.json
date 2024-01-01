@@ -9170,11 +9170,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\Personal\\Project\\CRUD_API\\CRUD_API\\CRUD_API.csproj",
+      "projectUniqueName": "D:\\Personal\\Project\\crud-all\\CRUD_API\\CRUD_API.csproj",
       "projectName": "CRUD_API",
-      "projectPath": "D:\\Personal\\Project\\CRUD_API\\CRUD_API\\CRUD_API.csproj",
+      "projectPath": "D:\\Personal\\Project\\crud-all\\CRUD_API\\CRUD_API.csproj",
       "packagesPath": "C:\\Users\\Akash\\.nuget\\packages\\",
-      "outputPath": "D:\\Personal\\Project\\CRUD_API\\CRUD_API\\obj\\",
+      "outputPath": "D:\\Personal\\Project\\crud-all\\CRUD_API\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
