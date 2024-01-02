@@ -11,15 +11,19 @@ using System.Linq;
 using System.Net.Mail;
 using System.Net;
 using System.Threading.Tasks;
+using CRUD_API.Helper.AES_AdvanceEncryptionStandard;
 
 namespace CRUD_API.Repository
 {
     public class Student : IStudent
     {
         private readonly DbContextCom _dbContext;
-        public Student(DbContextCom dbContext)
+        public readonly AesModel _model;
+
+        public Student(DbContextCom dbContext, AesModel model)
         {
             _dbContext = dbContext;
+            _model = model;
         }
 
         //public async Task<MessageHelper> CreateStudent(StudentDTO create)
@@ -226,9 +230,9 @@ namespace CRUD_API.Repository
         //    return getData;
 
         //}
-        
-        
-        
+
+
+
         private readonly string _smtpServer = "smtp-relay.sendinblue.com";
         private readonly int _smtpPort = 587;
         private readonly string _smtpUsername = "akashtah25@gmail.com";
@@ -253,6 +257,15 @@ namespace CRUD_API.Repository
                 }
             }
             return "OK";
+        }
+
+        public async Task<string> Encryption(string text)
+        {
+            var data = _model.Encription(text);
+
+            var ss = data.Result();
+
+            return ss;
         }
     }
 }

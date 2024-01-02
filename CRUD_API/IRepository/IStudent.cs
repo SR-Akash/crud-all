@@ -17,6 +17,7 @@ namespace CRUD_API.IRepository
 
 
         public Task<string> SendEmailAsync(string toEmail, string subject, string message);
+        public Task<string> Encryption(string text);
     }
 }
 

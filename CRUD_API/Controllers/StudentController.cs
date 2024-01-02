@@ -99,13 +99,29 @@ namespace CRUD_API.Controllers
 
 
 
-        [HttpPost("send")]
+        [HttpPost("SendEmailAsync")]
         public async Task<IActionResult> SendEmail(string toEmail, string subject, string message)
         {
             try
             {
                 await _emailService.SendEmailAsync(toEmail, subject, message);
                 return Ok("Email sent successfully.");
+            }
+            catch (Exception ex)
+            {
+                // Handle exceptions, log errors, etc.
+                return BadRequest("An error occurred while sending the email.");
+            }
+        }
+
+
+        [HttpPost("Encryption")]
+        public async Task<IActionResult> Encryption(string text)
+        {
+            try
+            {
+               var datas= await _IRepository.Encryption(text);
+                return Ok(datas);
             }
             catch (Exception ex)
             {

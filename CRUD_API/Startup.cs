@@ -22,6 +22,7 @@ using CRUD_API.Helper;
 using Microsoft.EntityFrameworkCore;
 using DinkToPdf.Contracts;
 using DinkToPdf;
+using CRUD_API.Helper.AES_AdvanceEncryptionStandard;
 
 namespace CRUD_API
 {
@@ -57,6 +58,7 @@ namespace CRUD_API
             services.AddSingleton(typeof(IConverter), new SynchronizedConverter(new PdfTools()));
             #endregion
 
+            services.AddScoped<AesModel>();
             services.AddMemoryCache();
             services.AddControllers();
             services.AddHttpContextAccessor();
