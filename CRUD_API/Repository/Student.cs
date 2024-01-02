@@ -261,11 +261,10 @@ namespace CRUD_API.Repository
 
         public async Task<string> Encryption(string text)
         {
-            var data = _model.Encription(text);
+            var data = await _model.Encription(text);
 
-            var ss = data.Result();
 
-            return ss;
+            return data;
         }
     }
 }

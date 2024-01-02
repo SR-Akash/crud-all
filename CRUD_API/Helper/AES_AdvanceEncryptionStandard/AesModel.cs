@@ -27,7 +27,8 @@ namespace CRUD_API.Helper.AES_AdvanceEncryptionStandard
 
             if (_env.IsDevelopment())
             {
-                return await Task.FromResult(AesOperation.EncryptionStringWithOutKey(data));
+                var datas = await Task.FromResult(AesOperation.EncryptionStringWithOutKey(data));
+                return datas;
             }
             else
             {
