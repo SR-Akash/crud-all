@@ -34,7 +34,6 @@ namespace CRUD_API.Repository
             return "OK";
         }
 
-
         private static async Task<string> GetAccessToken(string apiEndpoint, string clientId, string clientSecret)
         {
             using (HttpClient client = new HttpClient())

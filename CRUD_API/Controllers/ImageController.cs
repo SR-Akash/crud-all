@@ -25,6 +25,7 @@ namespace SME.Controllers.FTP
         }
 
 
+
         [HttpPost("UploadImage")]
         public IActionResult UploadImage(IFormFile image)
         {
