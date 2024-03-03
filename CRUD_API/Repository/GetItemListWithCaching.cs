@@ -21,14 +21,14 @@ namespace CRUD_API.Repository
 
         public async Task<object> GetAllItemList()
         {
-            string cacheKey = "item";
-            var data = new List<Models.Item>();
+            string cacheKey = "userTest";
+            var data = new List<Models.Usertest>();
 
             bool isCached = _cache.TryGetValue(cacheKey, out data);
 
             if (!isCached)
             {
-                data = (from i in _context.Items
+                data = (from i in _context.Usertests
                         where i.IsActive == true
                         select i).Take(50).ToList();
                 var options = new MemoryCacheEntryOptions

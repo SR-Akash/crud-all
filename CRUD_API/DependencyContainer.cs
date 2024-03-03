@@ -15,6 +15,7 @@ namespace CRUD_API
             services.AddTransient<IStudent, Student>();
             services.AddTransient<ICaching, GetItemListWithCaching>();
             services.AddTransient<ISymmetricEncryptionExample, SymmetricEncryptionExample>();
+            services.AddTransient<IHashingPassword, HashingPassword>();
         }
 
     }
